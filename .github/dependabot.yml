@@ -1,433 +1,358 @@
 version: 2
 updates:
   # Enable version updates for npm
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 10
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'javascript'
+      - "dependencies"
+      - "javascript"
     ignore:
       # Ignore updates to packages that are known to cause issues
-      - dependency-name: '*'
-        update-types: ['version-update:semver-major']
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     groups:
       # Group all minor and patch updates together
       minor-and-patch:
         patterns:
-          - '*'
+          - "*"
         update-types:
-          - 'minor'
-          - 'patch'
+          - "minor"
+          - "patch"
 
   # Enable version updates for GitHub Actions
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'ci'
-      include: 'scope'
+      prefix: "ci"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'github-actions'
+      - "dependencies"
+      - "github-actions"
     groups:
       # Group all GitHub Actions updates together
       github-actions:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Docker
-  - package-ecosystem: 'docker'
-    directory: '/'
+  - package-ecosystem: "docker"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'docker'
-      include: 'scope'
+      prefix: "docker"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'docker'
+      - "dependencies"
+      - "docker"
     groups:
       # Group all Docker updates together
       docker:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Python (if applicable)
-  - package-ecosystem: 'pip'
-    directory: '/'
+  - package-ecosystem: "pip"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'python'
+      - "dependencies"
+      - "python"
     groups:
       # Group all Python updates together
       python:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Composer (if applicable)
-  - package-ecosystem: 'composer'
-    directory: '/'
+  - package-ecosystem: "composer"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'php'
+      - "dependencies"
+      - "php"
     groups:
       # Group all Composer updates together
       composer:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Maven (if applicable)
-  - package-ecosystem: 'maven'
-    directory: '/'
+  - package-ecosystem: "maven"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'java'
+      - "dependencies"
+      - "java"
     groups:
       # Group all Maven updates together
       maven:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Gradle (if applicable)
-  - package-ecosystem: 'gradle'
-    directory: '/'
+  - package-ecosystem: "gradle"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'gradle'
+      - "dependencies"
+      - "gradle"
     groups:
       # Group all Gradle updates together
       gradle:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for NuGet (if applicable)
-  - package-ecosystem: 'nuget'
-    directory: '/'
+  - package-ecosystem: "nuget"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'dotnet'
+      - "dependencies"
+      - "dotnet"
     groups:
       # Group all NuGet updates together
       nuget:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Bundler (if applicable)
-  - package-ecosystem: 'bundler'
-    directory: '/'
+  - package-ecosystem: "bundler"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'ruby'
+      - "dependencies"
+      - "ruby"
     groups:
       # Group all Bundler updates together
       bundler:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Cargo (if applicable)
-  - package-ecosystem: 'cargo'
-    directory: '/'
+  - package-ecosystem: "cargo"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'rust'
+      - "dependencies"
+      - "rust"
     groups:
       # Group all Cargo updates together
       cargo:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Go modules (if applicable)
-  - package-ecosystem: 'gomod'
-    directory: '/'
+  - package-ecosystem: "gomod"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'go'
+      - "dependencies"
+      - "go"
     groups:
       # Group all Go module updates together
       gomod:
         patterns:
-          - '*'
-
-  # Enable version updates for Hex (if applicable)
-  - package-ecosystem: 'hex'
-    directory: '/'
-    schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
-    open-pull-requests-limit: 5
-    reviewers:
-      - 'Saad-Abdulah'
-    assignees:
-      - 'Saad-Abdulah'
-    commit-message:
-      prefix: 'chore'
-      include: 'scope'
-    labels:
-      - 'dependencies'
-      - 'elixir'
-    groups:
-      # Group all Hex updates together
-      hex:
-        patterns:
-          - '*'
-
-  # Enable version updates for Pub (if applicable)
-  - package-ecosystem: 'pub'
-    directory: '/'
-    schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
-    open-pull-requests-limit: 5
-    reviewers:
-      - 'Saad-Abdulah'
-    assignees:
-      - 'Saad-Abdulah'
-    commit-message:
-      prefix: 'chore'
-      include: 'scope'
-    labels:
-      - 'dependencies'
-      - 'dart'
-    groups:
-      # Group all Pub updates together
-      pub:
-        patterns:
-          - '*'
-
-  # Enable version updates for Swift (if applicable)
-  - package-ecosystem: 'swift'
-    directory: '/'
-    schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
-    open-pull-requests-limit: 5
-    reviewers:
-      - 'Saad-Abdulah'
-    assignees:
-      - 'Saad-Abdulah'
-    commit-message:
-      prefix: 'chore'
-      include: 'scope'
-    labels:
-      - 'dependencies'
-      - 'swift'
-    groups:
-      # Group all Swift updates together
-      swift:
-        patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Terraform (if applicable)
-  - package-ecosystem: 'terraform'
-    directory: '/'
+  - package-ecosystem: "terraform"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'terraform'
+      - "dependencies"
+      - "terraform"
     groups:
       # Group all Terraform updates together
       terraform:
         patterns:
-          - '*'
+          - "*"
 
   # Enable version updates for Elm (if applicable)
-  - package-ecosystem: 'elm'
-    directory: '/'
+  - package-ecosystem: "elm"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'elm'
+      - "dependencies"
+      - "elm"
     groups:
       # Group all Elm updates together
       elm:
         patterns:
-          - '*'
+          - "*"
 
-  # Enable version updates for Submodules (if applicable)
-  - package-ecosystem: 'submodules'
-    directory: '/'
+  # Enable version updates for Git Submodules (if applicable)
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'monday'
-      time: '09:00'
-      timezone: 'UTC'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
     reviewers:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     assignees:
-      - 'Saad-Abdulah'
+      - "Saad-Abdulah"
     commit-message:
-      prefix: 'chore'
-      include: 'scope'
+      prefix: "chore"
+      include: "scope"
     labels:
-      - 'dependencies'
-      - 'submodules'
+      - "dependencies"
+      - "submodules"
     groups:
       # Group all Submodule updates together
       submodules:
         patterns:
-          - '*'
+          - "*"
